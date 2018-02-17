@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails DCPortfolio: development" uuid="d20fc4f9-aca0-450f-8503-e91a8a80840b">
+      <database-info product="PostgreSQL" version="10.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>DCPortfolio_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails DCPortfolio: production" uuid="2bd943c4-3025-41d5-8f38-631535db75c6">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>newuser</user-name>
+    </data-source>
+    <data-source name="Rails DCPortfolio: test" uuid="ba50e76b-aeef-47cd-9f37-20ea714a40ea">
+      <database-info product="PostgreSQL" version="10.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>DCPortfolio_test:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>
