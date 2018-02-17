@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails DCPortfolio: development" uuid="d20fc4f9-aca0-450f-8503-e91a8a80840b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DCPortfolio_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails DCPortfolio: production" uuid="2bd943c4-3025-41d5-8f38-631535db75c6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DCPortfolio_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails DCPortfolio: test" uuid="ba50e76b-aeef-47cd-9f37-20ea714a40ea">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DCPortfolio_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
