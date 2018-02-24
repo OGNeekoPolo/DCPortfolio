@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -9,8 +9,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show
-  end
+  def show; end
 
   # GET /blogs/new
   def new
@@ -18,8 +17,7 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /blogs
   # POST /blogs.json
@@ -59,6 +57,15 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_status
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: 'Post status has been updated'
   end
 
   private
