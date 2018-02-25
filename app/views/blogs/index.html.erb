@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Blogs</h1>
-
+<%= link_to 'New Blog', new_blog_path, class: 'btn btn-success' %>
 <table>
   <thead>
     <tr>
       <th>Title</th>
+      <th>Topic</th>
       <th>Body</th>
       <th colspan="4"></th>
     </tr>
@@ -15,6 +16,11 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
+        <% if blog.topic.nil? %>
+          <td></td>
+        <% else %>
+          <td><%= blog.topic.title %></td>
+        <% end %>
         <td><%= blog.body %></td>
         <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
         <td><%= link_to 'Show', blog %></td>
@@ -24,7 +30,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
