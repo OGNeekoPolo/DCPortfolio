@@ -1,4 +1,7 @@
 %h1 Home Page
+
+%h3= "Hi, #{current_user.first_name}" if current_user
+
 = @posts.inspect
 %br/
 %br/
