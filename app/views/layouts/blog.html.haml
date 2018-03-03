@@ -22,6 +22,4 @@
 
     = render partial: 'shared/navbar', locals: { location: 'bottom' }
 
-
-    - if session[:source]
-      %p= "Thanks for visiting me from #{session[:source]}"
+    = source_helper
