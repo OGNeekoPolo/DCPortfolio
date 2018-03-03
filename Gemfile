@@ -56,3 +56,4 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise' # rails g devise:views -> Generates Devise views for customization
+gem 'pry'
