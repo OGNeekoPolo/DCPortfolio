@@ -1,0 +1,15 @@
+.container
+  .row
+    = link_to 'Home', root_path, class: 'btn btn-info'
+    = link_to 'About', about_path, class: 'btn btn-info'
+    = link_to 'Contact', contact_path, class: 'btn btn-info'
+    = link_to 'Blogs', blogs_path, class: 'btn btn-info'
+    = link_to 'Portfolio', portfolios_path, class: 'btn btn-info'
+
+    - if current_user.is_a?(User)
+      = link_to 'Logout', destroy_user_session_path, method: :delete,
+          data: {confirm: 'Are you sure you want to logout?'},
+        class: 'btn btn-danger'
+    - else
+      = link_to 'Register', new_user_registration_path, class: 'btn btn-warning'
+      = link_to 'Login', new_user_session_path, class: 'btn btn-success'
