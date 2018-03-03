@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Nikolas Trabue Portfolio Site
 
-Things you may want to cover:
+Welcome to the source code for my personal portfolio. Building this website was both a fun and educational experience. I hope you enjoy looking through the code and looking at different practices I used.
 
-* Ruby version
+Tech Stack:
+- Ruby v.2.5.0
+- Rails
+- Bootstrap
+- JavaScript
+- PostegreSQL
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
