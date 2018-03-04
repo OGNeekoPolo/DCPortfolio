@@ -8,7 +8,7 @@
 
 %br/
 
-= link_to 'Edit', edit_portfolio_path(portfolio_item), class: 'btn btn-primary'
+= link_to 'Edit', edit_portfolio_path(portfolio_item), class: 'btn btn-primary' if logged_in?(:site_admin)
 
-= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger'
+= link_to 'Delete', portfolio_item, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' if logged_in?(:site_admin)
 %hr/
