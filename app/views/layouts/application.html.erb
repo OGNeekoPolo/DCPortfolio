@@ -15,11 +15,11 @@
   <body class="text-center">
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
 
-      <%= render partial: 'shared/application_navbar', locals: { location: 'top' } %>
+      <%= render partial: 'shared/application_navbar' %>
 
-      <%= login_helper %>
-
-      <%= yield %>
+      <main role="main" class="inner cover">
+       <%= yield %>
+      </main>
 
       <%= source_helper %>
 

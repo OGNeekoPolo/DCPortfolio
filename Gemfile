@@ -59,3 +59,4 @@ gem 'devise' # rails g devise:views -> Generates Devise views for customization
 gem 'pry'
 gem 'trabue_view_tool', git: 'https://github.com/OGNeekoPolo/trabue-view-tool'
 gem 'petergate', '~> 1.8'
+gem 'redcarpet'
