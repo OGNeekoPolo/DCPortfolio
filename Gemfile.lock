@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/OGNeekoPolo/trabue-view-tool
+  revision: 07938600f4cc6f5c9ebfa7ad08c58ad6685d87f5
+  specs:
+    trabue_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -207,6 +213,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  trabue_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

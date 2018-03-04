@@ -20,4 +20,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: 'source-greeting')
     end
   end
+
+  def copyright_generator
+    TrabueViewTool::Renderer.copyright 'Nikolas Trabue', 'All rights reserved'
+  end
 end

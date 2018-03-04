@@ -57,3 +57,4 @@ gem 'jquery-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise' # rails g devise:views -> Generates Devise views for customization
 gem 'pry'
+gem 'trabue_view_tool', git: 'https://github.com/OGNeekoPolo/trabue-view-tool'
