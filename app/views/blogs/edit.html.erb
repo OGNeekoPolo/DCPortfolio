@@ -1,6 +1,19 @@
-<h1>Editing Blog</h1>
+<%= render partial: 'shared/blog_header', locals: { :item => @feature_blog } %>
 
-<%= render 'form', blog: @blog %>
+<div class="row">
+  <div class="col-md-8 blog-main">
+    <h3 class="pb-3 mb-4 font-italic border-bottom">
+      Editing Blog
+    </h3>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+    <%= render 'form', blog: @blog, btnName: 'Edit Blog' %>
+
+    <%= link_to 'Back', blogs_path(@blog) %>
+
+  </div>
+
+  <%= render partial: 'blogs/sidebar' %>
+
+</div>
+
+
