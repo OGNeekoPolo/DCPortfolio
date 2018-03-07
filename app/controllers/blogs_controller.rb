@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @page_title = "Nik's Portfolio | Blogs"
+    @feature_blog = Blog.all.sample
   end
 
   # GET /blogs/1

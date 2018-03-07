@@ -58,8 +58,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
-  min-width: 55em;
+  width: 55em;
 }
 
 
@@ -96,7 +95,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 48em) {
   .masthead-brand {
     float: left;
   }
