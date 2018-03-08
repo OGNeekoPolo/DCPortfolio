@@ -19,8 +19,10 @@
 
     %main{ :role => 'main' }
 
-      = render :partial => 'shared/portfolio_masthead'
+      - unless logged_in?(:site_admin)
+        = render :partial => 'shared/portfolio_masthead'
 
+      %br/
       = yield
 
     = render :partial => 'shared/portfolio_footer'
