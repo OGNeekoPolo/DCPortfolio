@@ -1,6 +1,6 @@
 .col-md-4
 
-  .card.mb-4.box-shadow
+  .card.mb-4.box-shadow{ :data => { :id => "#{portfolio_item.id}" } }
 
     = image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?
 
