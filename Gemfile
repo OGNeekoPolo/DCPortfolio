@@ -47,3 +47,4 @@ gem 'carrierwave-aws', '~> 1.3' # Allows carrierwave to work with the AWS SDK
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' # Allows you to setup an environment file for all of your credentials
 gem 'cocoon', '~> 1.2', '>= 1.2.11' # Gem for nested forms using jQuery
 gem 'gritter', '~> 1.2' # Gem for adding nice notifications to your website
+gem 'twitter', '~> 6.2'
