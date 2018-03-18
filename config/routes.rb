@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about', as: :about
   get 'contact', to: 'pages#contact', as: :contact
   get 'home', to: 'pages#home', as: :home
+  get 'tech-news', to: 'pages#tech_news'
 
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
