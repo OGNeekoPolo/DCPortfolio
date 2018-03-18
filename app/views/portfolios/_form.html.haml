@@ -24,8 +24,8 @@
       %h4 Technologies Used:
       %div
         = form.fields_for :technologies do |technology_form|
-          .form-group
-            = technology_form.label :name
-            = technology_form.text_field :name, class: 'form-control'
+          = render partial: 'technology_fields', locals: { f: technology_form }
+        %div
+          = link_to_add_association 'Add Technology', form, :technologies
       .form-group
         = form.submit "#{@button_title}", class: 'btn btn-primary'
