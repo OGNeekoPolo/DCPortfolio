@@ -1,26 +1,21 @@
-<%= render partial: 'shared/blog_header', locals: { :item => @blogs.sample } %>
+<%= render partial: 'shared/blog_header', locals: { :item => @feature_blog } %>
 
 <div class="row">
   <div class="col-md-8 blog-main">
     <h3 class="pb-3 mb-4 font-italic border-bottom">
-      From the Vault
+      All Blog Topics
       <span>
         <%= link_to 'Add Blog', new_blog_path, class: 'btn btn-primary' if logged_in?(:site_admin) %>
       </span>
       <span>
-        <%= link_to 'Topics', topics_path, class: 'btn btn-secondary' %>
+        <%= link_to 'Back To Blogs', blogs_path, class: 'btn btn-secondary' %>
       </span>
     </h3>
 
-    <%= render @blogs %>
+    <%= render @topics %>
 
-    <%= paginate @blogs %>
-
-  </div><!-- /.blog-main -->
+  </div>
 
   <%= render partial: 'blogs/sidebar' %>
 
-</div><!-- /.row -->
-
-
-<p id="notice"><%= notice %></p>
+</div>

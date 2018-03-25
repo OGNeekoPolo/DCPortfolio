@@ -9,7 +9,7 @@
     <h2><%= @blog.title %></h2>
 
     <p>
-      <%= @blog.topic.title %>
+      <%= link_to @blog.topic.title, topic_path(@blog.topic.id) %>
     </p>
     <% if logged_in?(:site_admin) %>
       <%= link_to 'Edit', edit_blog_path(@blog) %> |
