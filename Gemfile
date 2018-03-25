@@ -37,7 +37,6 @@ gem 'devise' # rails g devise:views -> Generates Devise views for customization
 gem 'pry'
 gem 'trabue_view_tool', git: 'https://github.com/OGNeekoPolo/trabue-view-tool'
 gem 'petergate', '~> 1.8' #Used to give users roles for authorization
-gem 'redcarpet' # Gem for markdown syntax
 gem 'font-awesome-rails' # Gem for icons
 gem 'kaminari' # Gem for pagination
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1' # Allows you to add libraries such as .sortable() (jQuery)
@@ -49,3 +48,5 @@ gem 'cocoon', '~> 1.2', '>= 1.2.11' # Gem for nested forms using jQuery
 gem 'gritter', '~> 1.2' # Gem for adding nice notifications to your website
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 4.0', '>= 4.0.1' # NoSQL Database
+gem 'redcarpet', '~> 3.4' # Markdown parser
+gem 'coderay', '~> 1.1', '>= 1.1.2' # Syntax Highlighting
