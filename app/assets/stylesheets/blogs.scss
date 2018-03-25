@@ -8,6 +8,10 @@
 @import "font-awesome";
 @import "gritter";
 
+body {
+  background-color: #2B3E50;
+  color: #EBEBEB;
+}
 
 .blog-header {
   line-height: 1;
@@ -17,10 +21,12 @@
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
+  color: #DF691A !important;
 }
 
 .blog-header-logo:hover {
   text-decoration: none;
+  //color: #EBEBEB !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -120,6 +126,17 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post-title {
   margin-bottom: .25rem;
   font-size: 2.5rem;
+
+  a {
+    color: #DF691A !important;
+    text-decoration: none;
+
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #EBEBEB !important;
+  }
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
@@ -134,8 +151,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  background-color: #4E5D6C !important;
+  border-top: .05rem solid #4E5D6C;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -151,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-card > .card {
   margin-top: 15px;
+  background-color: #4E5D6C;
 }
 
 .comment-attribution {
@@ -183,4 +201,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .published-status {
   color: #730E15;
+}
+
+.sidebar-div {
+  background-color: #DF691A !important;
+  a {
+    color: #EBEBEB;
+  }
+}
+
+#social-links-div {
+  margin-top: 20px;
+}
+
+pre {
+  background-color: #F8F5F0 !important;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.badge {
+  line-height: normal;
+}
+
+#blog-nav {
+  a {
+    color: #DF691A !important;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #EBEBEB !important;
+  }
+}
+
+.about-quick-link {
+  color: #DF691A !important;
+  text-decoration: none;
+}
+
+.about-quick-link:hover {
+  text-decoration: none;
+  color: #EBEBEB !important;
 }

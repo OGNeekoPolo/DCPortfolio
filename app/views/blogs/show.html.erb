@@ -3,23 +3,32 @@
 <div class="row">
   <div class="col-md-8 blog-main">
     <h3 class="pb-3 mb-4 font-italic border-bottom">
-      From the Vault   <%= link_to 'Add Blog', new_blog_path, class: 'btn btn-primary' if logged_in?(:site_admin) %>
+      <%= link_to 'Add Blog', new_blog_path, class: 'btn btn-primary' if logged_in?(:site_admin) %>
     </h3>
 
     <h2><%= @blog.title %></h2>
     <br/>
     <nav aria-label="breadcrumb">
-      <div class="breadcrumb">
-        <%= link_to 'Home', root_path, class: 'breadcrumb-item' %>
-        <%= link_to 'Blogs', blogs_path, class: 'breadcrumb-item' %>
-        <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
-        <span class="breadcrumb-item active" aria-current="page"><%= @blog.title %></span>
+      <!--<div class="breadcrumb">-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="<%= root_path %>" class="badge badge-warning">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="<%= blogs_path %>" class="badge badge-info">Blogs</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="<%= topic_path(@blog.topic) %>" class="badge badge-success"><%= @blog.topic.title %></a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <%= @blog.title %>
+        </li>
         <span class="admin-buttons">
-          <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
+        <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
           <%= link_to fa_icon('trash'), @blog, method: :delete,
                       data: { confirm: 'Are you sure you want to delete this blog?' } if logged_in?(:site_admin) %>
         </span>
-      </div>
+      </ol>
     </nav>
     <br/>
     <p>
@@ -33,7 +42,7 @@
     <div id="comments" data-blog-id="<%= @blog.id %>">
       <%= render @blog.comments %>
     </div>
-
+    <br/>
 
   </div>
 

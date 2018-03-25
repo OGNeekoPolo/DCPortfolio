@@ -31,4 +31,23 @@ module BlogsHelper
       link_to fa_icon('file-text'), toggle_status_blog_path(blog)
     end
   end
+
+  def collection_helper(blog, form)
+    if blog.topic
+      form.collection_select(:topic_id, Topic.all, :id, :title,
+                             {
+                               selected: blog.topic.id,
+                               include_blank: true
+                             },
+                             class: 'form-control'
+      )
+    else
+      form.collection_select(:topic_id, Topic.all, :id, :title,
+                             {
+                               include_blank: true
+                             },
+                             class: 'form-control'
+      )
+    end
+  end
 end
