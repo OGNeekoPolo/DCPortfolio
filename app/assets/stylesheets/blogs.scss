@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#social-links-div {
+.links-div {
   margin-top: 20px;
 }
 
@@ -244,4 +244,11 @@ pre {
 .about-quick-link:hover {
   text-decoration: none;
   color: #EBEBEB !important;
+}
+
+#greeting-block {
+  a {
+    color: #DF691A;
+    text-decoration: none;
+  }
 }
