@@ -1,13 +1,19 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_feature_blog, only: [:show, :edit, :new]
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
+  access all: [:show, :index],
+         user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]},
+         site_admin: :all
   layout 'blog'
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(3)
+    @blogs = if logged_in?(:site_admin)
+               Blog.recent.page(params[:page]).per(3)
+             else
+               Blog.published.recent.page(params[:page]).per(3)
+             end
     @page_title = "Nik's Portfolio | Blogs"
   end
 
