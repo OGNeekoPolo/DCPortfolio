@@ -23,4 +23,12 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
+
+  def status_helper(blog)
+    if blog.published?
+      link_to fa_icon('file-text'), toggle_status_blog_path(blog), class: 'published-status'
+    else
+      link_to fa_icon('file-text'), toggle_status_blog_path(blog)
+    end
+  end
 end
