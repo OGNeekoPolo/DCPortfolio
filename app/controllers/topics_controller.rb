@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   layout 'blog'
   before_action :set_feature_blog, only: %i[index show]
+  before_action :set_sidebar_topics
 
   def index
     @topics = Topic.all
@@ -21,4 +22,7 @@ class TopicsController < ApplicationController
     @feature_blog = Blog.all.sample
   end
 
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
+  end
 end

@@ -1,8 +1,9 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_feature_blog, only: [:show, :edit, :new]
-  access all: [:show, :index],
-         user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]},
+  before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  before_action :set_feature_blog, only: %i[show edit new]
+  before_action :set_sidebar_topics, except: %i[update create destroy toggle_status]
+  access all: %i[show index],
+         user: { except: %i[destroy new create update edit toggle_status] },
          site_admin: :all
   layout 'blog'
 
@@ -100,5 +101,9 @@ class BlogsController < ApplicationController
 
   def set_feature_blog
     @feature_blog = Blog.all.sample
+  end
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
   end
 end
