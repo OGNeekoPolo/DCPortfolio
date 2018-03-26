@@ -178,3 +178,19 @@ body {
 .tech-news > .card {
   padding: 30px;
 }
+
+.app-card-container {
+  color: #333333;
+
+  .card {
+    padding: 20px;
+  }
+
+  a{
+    color: #2B3E50;
+  }
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
