@@ -50,3 +50,4 @@ gem 'twitter', '~> 6.2'
 gem 'redis', '~> 4.0', '>= 4.0.1' # NoSQL Database
 gem 'redcarpet', '~> 3.4' # Markdown parser
 gem 'coderay', '~> 1.1', '>= 1.1.2' # Syntax Highlighting
+gem 'loofah', '~> 2.2', '>= 2.2.2'
