@@ -7,6 +7,23 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag('E54B8287.jpg', alt: 'Profile Image', width: '250px', class: 'profile-img') %>
+        <div class="skills text-left">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h5><%= skill.title %></h5>
+              <div class="progress">
+                <div
+                class="progress-bar progress-bar-striped bg-warning"
+                role="progressbar"
+                aria-valuenow="<%= skill.percent_completed %>"
+                aria-valuemax="100"
+                style="width: <%= skill.percent_completed %>%"
+                >
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
       <div class="col-md-8 text-left">
         <p>I picked up coding back in 2015 and have not been able to put computers down since. I have always had a love for all things technology, but when I found coding, I felt like I finally found what I was meant to do with my life.</p>
