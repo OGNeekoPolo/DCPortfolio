@@ -11,9 +11,11 @@
       </span>
     </h3>
 
-    <%= render @blogs %>
+    <% unless @blogs.nil? %>
+      <%= render @blogs %>
 
-    <%= paginate @blogs %>
+      <%= paginate @blogs %>
+    <% end %>
 
   </div><!-- /.blog-main -->
 
